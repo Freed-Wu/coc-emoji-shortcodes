@@ -1,6 +1,6 @@
 {
 	"name": "coc-emoji-shortcodes",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"description": "emoji' shortcodes source for coc.nvim",
 	"main": "src/index.js",
 	"scripts": {
@@ -51,7 +51,7 @@
 				},
 				"coc.source.emoji-shortcodes.shortcut": {
 					"type": "string",
-					"default": "ES"
+					"default": "😍"
 				},
 				"coc.source.emoji-shortcodes.disableSyntaxes": {
 					"type": "array",
@@ -61,6 +61,46 @@
 					}
 				},
 				"coc.source.emoji-shortcodes.filetypes": {
+					"type": [
+						"array",
+						"null"
+					],
+					"default": [
+						"markdown"
+					],
+					"items": {
+						"type": "string"
+					}
+				},
+				"coc.source.wechat-emoji-shortcodes.enable": {
+					"type": "boolean",
+					"default": true
+				},
+				"coc.source.wechat-emoji-shortcodes.triggerCharacters": {
+					"type": "array",
+					"default": [
+						"["
+					],
+					"items": {
+						"type": "string"
+					}
+				},
+				"coc.source.wechat-emoji-shortcodes.priority": {
+					"type": "integer",
+					"default": 3
+				},
+				"coc.source.wechat-emoji-shortcodes.shortcut": {
+					"type": "string",
+					"default": "😂"
+				},
+				"coc.source.wechat-emoji-shortcodes.disableSyntaxes": {
+					"type": "array",
+					"default": [],
+					"items": {
+						"type": "string"
+					}
+				},
+				"coc.source.wechat-emoji-shortcodes.filetypes": {
 					"type": [
 						"array",
 						"null"

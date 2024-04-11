@@ -18,5 +18,19 @@ exports.activate = async ctx => {
 		}
 	};
 
-	ctx.subscriptions.push(sources.createSource(source));
+	const wechatEmojiData = require(path.resolve(__dirname, 'wechat.json'));
+	const wechat_source = {
+		name: 'wechat-emoji-shortcodes',
+		triggerOnly: true,
+		doComplete: async function() {
+			return {
+				items: wechatEmojiData.map(e => ({
+					word: e,
+					menu: this.menu,
+				}))
+			};
+		}
+	};
+
+	ctx.subscriptions.push(sources.createSource(source), sources.createSource(wechat_source));
 };
