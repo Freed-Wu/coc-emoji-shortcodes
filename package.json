@@ -106,7 +106,7 @@
 						"null"
 					],
 					"default": [
-						"markdown"
+						"text"
 					],
 					"items": {
 						"type": "string"
